@@ -7,9 +7,10 @@ if mode == "n-c":
         print("Wip")
     if yes_or_no == "N":
         length = int(input("How Long Is Your Input : "))
+        shift_amount = int(input("How Many Shifts Do You Want (make sure its the same amount when you try to decode this code): "))
         for i in range(length):
             list.append(int(input("Number : ")))
-            list_converted.append(chr(list[i]-3))
+            list_converted.append(chr(list[i]-shift_amount))
         output_string = list_converted
         print("Your Sentence Is ", output_string)
     else:
@@ -20,9 +21,10 @@ if mode == "c-n":
         print("Wip")
     if yes_or_no == "N":
         length = int(input("How Long Is Your Input : "))
+        shift_amount = int(input("How Many Shifts Do You Want (make sure its the same amount when you try to decode this code): "))
         for i in range(length):
             list.append(input("Input : "))
-            list_converted.append(ord(list[i])+3)
+            list_converted.append(ord(list[i])+shift_amount)
         output_string = list_converted
         print("Your Code Is ", output_string)
     else:
